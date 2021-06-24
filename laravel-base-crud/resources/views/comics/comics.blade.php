@@ -20,20 +20,17 @@
     </header>
 
     <main>
-    {{-- @foreach($comics as $comic)
 
-    <a href="{{ comics.show/$id }}">
-     <h2>{{ $comic->ttile }}</h2>
-     <ul>
-        <li>{{ $comic->series }}</li>
-        <li>{{ $comic->sale_date }}</li>
-        <li>{{ $comic->description }}</li>
-     </ul>
+    <ol>
     
-    
-    </a>
+    @foreach($comics as $comic)
+
+        <li>
+            <a href="{{ route('comics.show', ['id' => $comic->id]) }}">{{ $comic->title }}</a>
+        </li>
         
-    @endforeach --}}
+    @endforeach
+    </ol>
     
     
     
