@@ -7,6 +7,20 @@
     <title>Add Comic</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+
+                <li><a href="{{ route('home') }}">Torna alla home</a></li>
+                <li><a href="{{ route('comics.index') }}">Tutti i fumetti</a></li>
+                <li><a href="{{ route('comics.create') }}">Aggiungi fumetto</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    @include('comics.components.errors')
+
+
     <form action="{{ route('comics.store') }}" method="post">
     @csrf
 
