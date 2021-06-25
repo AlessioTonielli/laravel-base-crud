@@ -1,0 +1,162 @@
+.banner {
+    height: 70px;
+    background-color: $blue;
+    position: relative;
+    .box-img {
+        width: 140px;
+        height: 210px;
+        position: relative;
+        position: absolute;
+        bottom: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        h5 {
+            color: white;
+            background-color: rgb(174, 149, 241);
+            text-transform: uppercase;
+            position: absolute; 
+            padding: 2px;
+            font-size: 12px;
+            font-weight: 300;
+            &.top-banner {
+                left: 0;
+                top: 0;
+            }
+            &.bot-banner {
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.description {
+    .container {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        .content {
+            width: calc(100% / 3 * 2 - 10px);
+            h2 {
+                text-transform: uppercase;
+            }
+            .description {
+                line-height: 27px;
+                color: rgb(75, 61, 61);
+            }
+        }
+        .shop {
+            margin: 20px 0;
+            color: white;
+            background-color: rgb(112, 183, 100);
+            * {
+                padding: 5px 10px;
+            }
+            display: flex;
+            align-items: center;
+            .left {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-right: 1px solid green;
+                color: rgb(181, 246, 156);
+                span {
+                    color: white;
+                }
+            }
+            .rigth {
+                text-transform: capitalize;
+            }
+        }
+        .advertisement {
+            text-align: right;
+            color: rgb(75, 61, 61);
+            
+        }
+    }
+}
+
+.informations {
+    background-color: rgb(246,246,246);
+    
+    .container {
+        display: flex;
+        padding: 30px 0 80px 0;
+        display: flex;
+        justify-content: space-between;
+        .content {
+            width: calc(50% - 20px);
+            h3 {
+                margin-bottom: 10px;
+            }
+            .row {
+                font-size: 12px;
+
+                padding: 10px 0;
+                border-bottom: 1px solid rgb(212, 198, 198);
+                display: flex;
+                justify-content: space-between;
+                &:first-of-type {
+                    border-top: 1px solid rgb(212, 198, 198);
+
+                }
+                a {
+                    text-decoration: none;
+                    color: $blue;
+
+                }
+                h5, span {
+                    color: rgb(90, 82, 82);
+                }
+                p {
+                    width: 70%;
+                    color: $blue;
+
+                }
+                span {
+                    width: 70%;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+.ecommerce {
+    background-color: rgb(246,246,246);
+    border-top: 1px solid rgb(212, 198, 198);
+    .container {
+        display: flex;
+        .item {
+            padding: 10px;
+            width: 25%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-left: 1px solid rgb(212, 198, 198);
+            h5 {
+                color: rgb(121, 114, 114);
+            }
+            &:last-of-type {
+                border-right: 1px solid rgb(212, 198, 198);
+            }
+            .box-img {
+                height: 70px;
+                width: 50px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}

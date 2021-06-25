@@ -1,53 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
 
-                <li><a href="{{ route('home') }}">Torna alla home</a></li>
-                <li><a href="{{ route('comics.index') }}">Tutti i fumetti</a></li>
-                <li><a href="{{ route('comics.create') }}">Aggiungi fumetto</a></li>
-            
-            </ul>
-        </nav>
-    </header>
-    @include('comics.components.errors')
+@extends('comics.layout.default')
 
-    <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
-    @csrf
-    @method('PUT')
+@section('title', 'Edit Comics')
 
-    <label for="title">Titolo</label>
-    <input type="text" name="title" id="title" value="{{ $comic->title }}"><br>
+@section('hero')
+@include('comics.partials.hero')
+@endsection
 
-    <label for="series">Serie</label>
-    <input type="text" name="series" id="series" value="{{ $comic->series }}"><br>
+@section('content')
+@include('comics.components.errors')
+<section class="form">
 
-    <label for="poster">Poster</label>
-    <input type="text" name="poster" id="poster" value="{{ $comic->poster }}"><br>
 
-    <label for="price">Prezzo</label>
-    <input type="number" name="price" id="price" value="{{ $comic->price }}"><br>
 
-    <label for="type">Categoria</label>
-    <input type="text" name="type" id="type" value="{{ $comic->type }}"><br>
+    <div class="container">
 
-    <label for="sale_date">Data</label>
-    <input type="date" name="sale_date" id="sale_date" value="{{ $comic->sale_date }}"><br>
+        <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
+            @csrf
+            @method('PUT')
 
-    <label for="description">description</label>
-    <input type="text" name="description" id="description" value="{{ $comic->description }}"><br>
-    
-    <input type="submit" value="Modifica">
-    
-    
-    </form>
-</body>
-</html>
+
+            <h3>Titolo</h3>
+            <input type="text" name="title" id="title" value="{{ $comic->title }}"><br>
+
+            <h3>Serie</h3>
+            <input type="text" name="series" id="series" value="{{ $comic->series }}"><br>
+
+            <h3>Poster</h3>
+            <input type="text" name="poster" id="poster" value="{{ $comic->poster }}"><br>
+
+            <h3>Prezzo</h3>
+            <input type="text" name="price" id="price" value="{{ $comic->price }}"><br>
+
+            <h3>Categoria</h3>
+            <input type="text" name="type" id="type" value="{{ $comic->type }}"><br>
+
+            <h3>Data</h3>
+            <input type="date" name="sale_date" id="sale_date" value="{{ $comic->sale_date }}"><br>
+
+            <h3>Descrizione</h3>
+            <textarea name="description" id="description" cols="30" rows="10">{{ $comic->description }}</textarea><br>
+
+            <input type="submit" value="Modifica" class="btn">
+
+
+        </form>
+    </div>
+</section>
+@endsection
