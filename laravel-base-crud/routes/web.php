@@ -18,4 +18,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/comics', 'ComicController@index')->name('comics.index');
 Route::get('/comics/create', 'ComicController@create')->name('comics.create');
 Route::post('/comics/store', 'ComicController@store')->name('comics.store');
-Route::get('/comics/comic/{id}', 'ComicController@show')->name('comics.show');
+Route::get('/comics/{id}', 'ComicController@show')->name('comics.show');
+Route::get('/comics/{id}/edit', 'ComicController@edit')->name('comics.edit');
+Route::match(["PUT", "PATCH"], '/comics/{id}/update', 'ComicController@update')->name('comics.update');

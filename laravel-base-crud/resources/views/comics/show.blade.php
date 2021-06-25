@@ -22,12 +22,14 @@
     <ul>
     <h1>{{ $comic->title }}</h1>
     <ul>
-    <li>Serie: {{ $comic->series }}</li>
-    <li>Prezzo: {{ $comic->price }} €</li>
-    <li>Categoria: {{ $comic->type }}</li>
-    <li>Poster: {{ $comic->poster }}</li>
-    <li>descrizione: {{ $comic->description }}</li>
+        <li>Serie: {{ $comic->series }}</li>
+        <li>Prezzo: {{ $comic->price }} €</li>
+        <li>Categoria: {{ $comic->type }}</li>
+        <li>Poster: {{ $comic->poster }}</li>
+        <li>descrizione: {{ $comic->description }}</li>
     </ul>
+
+    <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Modifica</a>
     
     
     
