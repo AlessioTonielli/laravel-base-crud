@@ -16,11 +16,11 @@
         <div class="container-card">
             @foreach($comics as $comic)
             <div class="card">
-                <a href="{{ route('comics.show', ['id' => $comic['id']]) }}">
+                <a href="{{ route('comics.show', ['id' => $comic->id]) }}">
                     <div class="box-img">
-                        <img src="{{ $comic["poster"] }}" alt="">
+                        <img src="{{ $comic->poster }}" alt="">
                     </div>
-                    <h5>{{ $comic["series"] }}</h5>
+                    <h5>{{ $comic->series }}</h5>
                 </a>
             </div>
             @endforeach

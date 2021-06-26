@@ -24,22 +24,24 @@
             <h2>{{ $comic['title'] }}</h2>
             <div class="shop">
                 <div class="left">
-                    <p>U.S. Price: <span> {{ $comic['price'] }}</span></p>
+                    <p>U.S. Price: <span> {{ $comic->price }}</span></p>
                     <p>AVAILABLE</p>
                 </div>
                 <div class="rigth">
                     <p>check availability</p>
                 </div>
             </div>
-            <p class="description">{{ $comic['description'] }}</p>
-            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Modifica</a>
+            <p class="description">{{ $comic->description }}</p>
+            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}" class="btn">Modifica</a>
             <form action="{{ route('comics.destroy', ['id' => $comic->id]) }}" method="post">
                 @csrf
                 @method('DELETE')
 
-                <input type="submit" value="Cancella" class="delete">
+                <input type="submit" value="Cancella" class="btn">
 
             </form>
+            @include('comics.components.buttonBack')
+
 
         </div>
         <div class="advertisement">

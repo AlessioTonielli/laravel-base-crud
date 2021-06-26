@@ -45,6 +45,10 @@
 
 
         </form>
+            <button class="btn">
+                <a href="{{ route('comics.index') }}">Torna Indietro</a>
+            </button>
+
     </div>
 </section>
 @endsection

@@ -43,6 +43,7 @@
             
             
             </form>
+            @include('comics.components.buttonBack')
         </div>
 </section>
 @endsection

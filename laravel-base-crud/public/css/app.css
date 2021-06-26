@@ -72,20 +72,20 @@
   color: #4b3d3d;
 }
 
-.description .container .content a,
+/* .description .container .content a,
 .description .container form input {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #3483f1;
-  /* top: -20px; */
+  top: -20px;
   color: white;
   border: none;
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
   font-size: 18px;
-}
+} */
 
 .description .container .shop {
   margin: 20px 0;
@@ -563,13 +563,21 @@ footer .bot-footer .container .container-social ul li img {
   margin-top: 15px;
 }
 
-.form .container form .btn {
+.btn {
   border: 1px solid white;
   background-color: #3483f1;
   color: white;
   font-weight: 500;
   font-size: 18px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   cursor: pointer;
   margin-top: 20px;
+  text-decoration: none;
+  display:inline-block;
 }
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
