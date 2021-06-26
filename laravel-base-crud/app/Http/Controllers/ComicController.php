@@ -7,6 +7,12 @@ use App\Comic;
 
 class ComicController extends Controller
 {
+
+    public function home()
+    {
+        $comics = Comic::all();
+        return view("comics.home", ['comics' => $comics]); 
+    }
     /**
      * Display a listing of the resource.
      *
@@ -42,7 +48,7 @@ class ComicController extends Controller
             "title" => "required|max:100|min:3",
             "series" => "max:100",
             "type" => "max:50",
-            // "price" => "numeric",
+            "price" => "numeric",
             "sale_date" => "date",
         ]);
 

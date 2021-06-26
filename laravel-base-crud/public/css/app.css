@@ -405,29 +405,29 @@ nav .container .box-input i {
   text-decoration: none;
 }
 
-.about {
+.ecommerce {
   background-color: #3483f1;
 }
 
-.about .container {
+.ecommerce .container {
   padding: 30px 0;
   display: flex;
   justify-content: space-evenly;
 }
 
-.about .container .box {
+.ecommerce .container .box {
   width: calc(100% / 5 - 20px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about .container .box .box-img {
+.ecommerce .container .box .box-img {
   width: 30%;
   height: 60px;
 }
 
-.about .container .box .box-img img {
+.ecommerce .container .box .box-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -436,7 +436,7 @@ nav .container .box-input i {
      object-position: center;
 }
 
-.about .container .box h4 {
+.ecommerce .container .box h4 {
   font-size: 11px;
   color: white;
   margin-left: 10px;

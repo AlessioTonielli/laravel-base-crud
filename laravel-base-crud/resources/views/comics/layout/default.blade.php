@@ -19,7 +19,7 @@
 
         @yield('content')
 
-        @yield('about')
+        @include('comics.partials.ecommerce')
 
     </main>
 

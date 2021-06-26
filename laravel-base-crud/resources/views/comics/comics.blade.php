@@ -12,7 +12,6 @@
 
 <section class="comics">
     <div class="container">
-        <h3>CURRENT SERIES</h3>
         <div class="container-card">
             @foreach($comics as $comic)
             <div class="card">
