@@ -107,6 +107,51 @@ nav {
     }
 }
 
+.comics.home {
+    .container{
+        .container-card {
+            justify-content: space-evenly;
+            
+        }
+        .paginate {
+            padding-top: 20px;
+            ul {
+                list-style: none;
+                text-align: center;
+                .page-item {
+                    display: inline-block;
+                    padding: 10px;
+                    border: 2px solid white;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+                    }
+                    &.active {
+                        border-color: $blue;
+                        .page-link {
+                            color: $blue;
+                            text-decoration: none;
+                            padding: 10px;
+                        }
+                    }
+                    &.disable {
+                        visibility: hidden;
+                    }
+                    
+                }
+        
+        
+            }
+        
+        }
+        
+        
+        
+        
+    }
+}
+
 .comics {
     background-color: rgb(28,28,28);
     .container {
@@ -293,6 +338,4 @@ footer {
         }
     }
 }
-
-
 

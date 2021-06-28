@@ -46,7 +46,7 @@
 
         </form>
             
-        <a href="{{ route('comics.index') }}" class="btn_secondary">Torna Indietro</a>
+        <a href="{{ url()->previous() }}" class="btn_secondary">Torna Indietro</a>
            
 
     </div>

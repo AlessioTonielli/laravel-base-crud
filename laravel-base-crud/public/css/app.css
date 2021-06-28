@@ -283,6 +283,45 @@ nav .container .box-input i {
      object-position: top;
 }
 
+.comics.home .container .container-card {
+  justify-content: space-evenly;
+}
+
+.comics.home .container .paginate {
+  padding-top: 20px;
+}
+
+.comics.home .container .paginate ul {
+  list-style: none;
+  text-align: center;
+}
+
+.comics.home .container .paginate ul .page-item {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.comics.home .container .paginate ul .page-item a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.comics.home .container .paginate ul .page-item.active {
+  border-color: #3483f1;
+}
+
+.comics.home .container .paginate ul .page-item.active .page-link {
+  color: #3483f1;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.comics.home .container .paginate ul .page-item.disable {
+  visibility: hidden;
+}
+
 .comics {
   background-color: #1c1c1c;
 }

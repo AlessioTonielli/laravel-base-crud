@@ -40,8 +40,8 @@
                 <input type="submit" value="Cancella" class="btn_primary delete">
 
             </form>
-        <a href="{{ url()->previous() }}" class="btn_primary">Torna Indietro</a>
-
+            {{-- <a href="{{ route('comics.index') }}" class="btn_primary">Torna indietro</a> --}}
+            <a href="{{ url()->previous() }}" class="btn_primary">Torna indietro</a>
 
 
         </div>

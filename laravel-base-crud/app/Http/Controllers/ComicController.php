@@ -10,7 +10,7 @@ class ComicController extends Controller
 
     public function home()
     {
-        $comics = Comic::all();
+        $comics = Comic::paginate(4);
         return view("comics.home", ['comics' => $comics]); 
     }
     /**

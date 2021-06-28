@@ -10,7 +10,7 @@
 
 @section('content')
 
-<section class="comics">
+<section class="comics home">
     <div class="container">
         <h3>CURRENT SERIES</h3>
         <div class="container-card">
@@ -26,7 +26,9 @@
             @endforeach
         </div>
 
-        
+        <div class="paginate">
+        {!! $comics->links() !!}
+        </div>
 
     </div>
 </section>
