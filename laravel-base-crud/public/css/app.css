@@ -1,3 +1,34 @@
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.btn_primary {
+  padding: 10px;
+  background-color: #3483f1;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn_secondary {
+  padding: 10px;
+  background-color: #3483f1;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  margin-top: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
 .banner {
   height: 70px;
   background-color: #3483f1;
@@ -43,16 +74,6 @@
   text-align: center;
 }
 
-.banner ul {
-  list-style: none;
-  text-align: center;
-}
-
-.banner ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
 .description .container {
   padding: 40px 0;
   display: flex;
@@ -71,21 +92,6 @@
   line-height: 27px;
   color: #4b3d3d;
 }
-
-/* .description .container .content a,
-.description .container form input {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #3483f1;
-  top: -20px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 18px;
-} */
 
 .description .container .shop {
   margin: 20px 0;
@@ -121,60 +127,8 @@
   color: #4b3d3d;
 }
 
-.informations {
-  background-color: #f6f6f6;
-}
-
-.informations .container {
-  display: flex;
-  padding: 30px 0 80px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.informations .container .content {
-  width: calc(50% - 20px);
-}
-
-.informations .container .content h3 {
-  margin-bottom: 10px;
-}
-
-.informations .container .content .row {
-  font-size: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid #d4c6c6;
-  display: flex;
-  justify-content: space-between;
-}
-
-.informations .container .content .row:first-of-type {
-  border-top: 1px solid #d4c6c6;
-}
-
-.informations .container .content .row a {
-  text-decoration: none;
-  color: #3483f1;
-}
-
-.informations .container .content .row h5,
-.informations .container .content .row span {
-  color: #5a5252;
-}
-
-.informations .container .content .row p {
-  width: 70%;
-  color: #3483f1;
-}
-
-.informations .container .content .row span {
-  width: 70%;
-  margin-right: 3px;
-}
-
 .ecommerce {
-  background-color: #f6f6f6;
-  border-top: 1px solid #d4c6c6;
+  background-color: #3483f1;
 }
 
 .ecommerce .container {
@@ -217,11 +171,6 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-}
-
-.container {
-  max-width: 1024px;
-  margin: auto;
 }
 
 .top-line {
@@ -388,21 +337,9 @@ nav .container .box-input i {
   color: white;
 }
 
-.comics .container .container-button {
+.comics .container .container_btn {
   text-align: center;
-}
-
-.comics .container .container-button a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #3483f1;
-  /* top: -20px; */
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: none;
+  margin-top: 15px;
 }
 
 .ecommerce {
@@ -443,7 +380,7 @@ nav .container .box-input i {
 }
 
 footer .top-footer {
-  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-image: url("/images/footer-bg.jpg");
 }
 
 footer .top-footer .container {
@@ -545,39 +482,20 @@ footer .bot-footer .container .container-social ul li img {
 
 .form {
   background-color: #3483f1;
+  border-bottom: 1px solid white;
+  padding: 20px 0;
 }
 
 .form .container {
   text-align: center;
-  padding: 30px 0;
-  
 }
 
-.form .container form input,
-.form .container form textarea {
-  outline: none;
-  padding: 5px;
-}
-
-.form .container form h3 {
+.form .container h3 {
   margin-top: 15px;
 }
 
-.btn {
-  border: 1px solid white;
-  background-color: #3483f1;
-  color: white;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 10px 10px;
-  cursor: pointer;
-  margin-top: 20px;
-  text-decoration: none;
-  display:inline-block;
-}
-
-.btn a {
-  text-decoration: none;
-  color: white;
+.form .container input {
+  outline: none;
+  padding: 5px;
 }
 

@@ -19381,11 +19381,14 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.addEventListener('load', function () {
-  var deleteBTn = document.querySelectorAll('delete');
-  deleteBTn.addEventListener('submit', function (event) {
-    if (!confirm("sei sicuro di voler cancellare l'elemenyo?")) {
-      event.preventDefault();
-    }
+  var deleteBTn = document.querySelectorAll('.delete');
+  console.log(deleteBTn);
+  deleteBTn.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      if (!confirm("sei sicuro di voler cancellare l'elemento?")) {
+        event.preventDefault();
+      }
+    });
   });
 });
 
@@ -19430,7 +19433,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleNotFoundError: Module not found: Error: Can't resolve '../footer-bg.jpg' in '/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/resources/sass'\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/webpack/lib/Compilation.js:925:10\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/webpack/lib/NormalModuleFactory.js:401:22\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/webpack/lib/NormalModuleFactory.js:130:21\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/webpack/lib/NormalModuleFactory.js:224:22\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/neo-async/async.js:2830:7\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/neo-async/async.js:6877:13\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/webpack/lib/NormalModuleFactory.js:214:25\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:213:14\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:44:7\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/RootPlugin.js:37:38\n    at _next43 (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:8:1)\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:31:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:27:15\n    at /Users/alessiotonielli/Boolean/Progetti/laravel-base-crud/laravel-base-crud/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

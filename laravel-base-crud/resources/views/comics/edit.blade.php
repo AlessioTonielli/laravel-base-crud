@@ -8,12 +8,12 @@
 @endsection
 
 @section('content')
-@include('comics.components.errors')
 <section class="form">
 
 
 
     <div class="container">
+        @include('comics.components.errors')
 
         <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
             @csrf
@@ -27,10 +27,10 @@
             <input type="text" name="series" id="series" value="{{ $comic->series }}"><br>
 
             <h3>Poster</h3>
-            <input type="text" name="poster" id="poster" value="{{ $comic->poster }}"><br>
+            <input type="url" name="poster" id="poster" value="{{ $comic->poster }}"><br>
 
             <h3>Prezzo</h3>
-            <input type="text" name="price" id="price" value="{{ $comic->price }}"><br>
+            <input type="number" name="price" id="price" value="{{ $comic->price }}" min="0.01" step="0.01"><br>
 
             <h3>Categoria</h3>
             <input type="text" name="type" id="type" value="{{ $comic->type }}"><br>
@@ -41,13 +41,13 @@
             <h3>Descrizione</h3>
             <textarea name="description" id="description" cols="30" rows="10">{{ $comic->description }}</textarea><br>
 
-            <input type="submit" value="Modifica" class="btn">
+            <input type="submit" value="Modifica" class="btn_secondary">
 
 
         </form>
-            <button class="btn">
-                <a href="{{ route('comics.index') }}">Torna Indietro</a>
-            </button>
+            
+        <a href="{{ route('comics.index') }}" class="btn_secondary">Torna Indietro</a>
+           
 
     </div>
 </section>

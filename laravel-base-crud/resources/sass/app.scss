@@ -1,5 +1,6 @@
 //
 @import "partials/_variables";
+@import "partials/_commons";
 @import "partials/_mainComics";
 
 *{
@@ -7,12 +8,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-}
-
-
-.container {
-    max-width: 1024px;
-    margin: auto;
 }
 
 .top-line {
@@ -153,24 +148,15 @@ nav {
             top: -20px;
             color: white;
         }
-        .container-button {
+        .container_btn {
             text-align: center;
-            button {
-                margin-top: 20px;
-                padding: 10px 20px;
-                background-color: $blue;
-                top: -20px;
-                color: white;
-                border: none;
-                cursor: pointer;
-                font-weight: 500;
-            }
+            margin-top: 15px;
         }
         
     }
 }
 
-.about {
+.ecommerce {
     background-color: $blue;
     .container {
         padding: 30px 0;
@@ -203,8 +189,7 @@ nav {
 
 footer {
     .top-footer {
-        background-image: url("../footer-bg.jpg");
-        // background-image: url("{{ asset('images/footer-bg.jpg') }}");
+        background-image: url("/images/footer-bg.jpg");
         .container {
             position: relative;
             padding: 20px 0;
@@ -289,6 +274,22 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+.form {
+    background-color: $blue;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+    .container {
+        text-align: center;
+        h3 {
+            margin-top: 15px;
+        }
+        input {
+            outline: none;
+            padding: 5px;
         }
     }
 }

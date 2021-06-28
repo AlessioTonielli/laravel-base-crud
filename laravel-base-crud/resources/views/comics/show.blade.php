@@ -32,15 +32,16 @@
                 </div>
             </div>
             <p class="description">{{ $comic->description }}</p>
-            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}" class="btn">Modifica</a>
+            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}" class="btn_primary">Modifica</a>
             <form action="{{ route('comics.destroy', ['id' => $comic->id]) }}" method="post">
                 @csrf
                 @method('DELETE')
 
-                <input type="submit" value="Cancella" class="btn">
+                <input type="submit" value="Cancella" class="btn_primary delete">
 
             </form>
-            @include('comics.components.buttonBack')
+        <a href="{{ url()->previous() }}" class="btn_primary">Torna Indietro</a>
+
 
 
         </div>

@@ -8,12 +8,12 @@
 @endsection
 
 @section('content')
-@include('comics.components.errors')
 <section class="form">
 
 
 
         <div class="container">
+            @include('comics.components.errors')   
         
             <form action="{{ route('comics.store') }}" method="post">
             @csrf
@@ -25,10 +25,10 @@
             <input type="text" name="series" id="series"><br>
 
             <h3>Poster</h3>
-            <input type="text" name="poster" id="poster"><br>
+            <input type="url" name="poster" id="poster"><br>
 
             <h3>Prezzo</h3>
-            <input type="text" name="price" id="price"><br>
+            <input type="number" name="price" id="price" step="0.01" min="0.01"><br>
 
             <h3>Categoria</h3>
             <input type="text" name="type" id="type"><br>
@@ -37,13 +37,14 @@
             <input type="date" name="sale_date" id="sale_date"><br>
 
             <h3>Descrizione</h3>
-            <textarea name="description" id="description" cols="30" rows="10">Descrizione: </textarea><br>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
             
-            <input type="submit" value="Aggiungi" class="btn">
+            <input type="submit" value="Aggiungi" class="btn_secondary">
             
             
             </form>
-            @include('comics.components.buttonBack')
+            <a href="{{ url()->previous() }}" class="btn_secondary">Torna Indietro</a>
+
         </div>
 </section>
 @endsection

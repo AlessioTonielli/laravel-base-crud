@@ -1,13 +1,17 @@
 @php
 
-    function setClassLink($namePage){
+    function setClassLink(...$namePages){
 
         $nameRequestPage = Request::route()->getName();
 
         $active = '';
 
-        if ($nameRequestPage == $namePage) {
-            $active = 'active';
+        foreach($namePages as $name) {
+
+            if ($nameRequestPage == $name) {
+                $active = 'active';
+            }
+
         }
 
         return $active;
@@ -32,7 +36,7 @@
             </div>
             <ul>
                 <li class="{{ setClassLink('comics.home') }}"><a href="{{ route('comics.home') }}">home</a></li>
-                <li class="{{ setClassLink('comics.index') }}"><a href="{{ route('comics.index') }}">comics</a></li>
+                <li class="{{ setClassLink('comics.index', 'comics.show', 'comics.create', 'comics.edit') }}"><a href="{{ route('comics.index') }}">comics</a></li>
             </ul>
             <div class="box-input">
                 <input type="text" placeholder="SEARCH">
