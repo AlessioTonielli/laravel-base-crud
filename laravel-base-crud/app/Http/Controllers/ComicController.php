@@ -53,13 +53,7 @@ class ComicController extends Controller
         ]);
 
         $newComic = new Comic();
-        $newComic->title = $newComicData['title'];
-        $newComic->series = $newComicData['series'];
-        $newComic->poster = $newComicData['poster'];
-        $newComic->price = $newComicData['price'];
-        $newComic->type = $newComicData['type'];
-        $newComic->sale_date = $newComicData['sale_date'];
-        $newComic->description = $newComicData['description'];
+        $newComic->fill($newComicData);
 
         $newComic->save();
         return redirect()->route('comics.index');
